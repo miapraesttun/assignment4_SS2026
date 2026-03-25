@@ -62,8 +62,7 @@ Receives a meal object with fields like:
   strMeal, strMealThumb, strCategory, strInstructions,
   strIngredientX, strMeasureX, etc.
 */
-function displayMealData(meal) {
-    function displayMealData(meal) {
+function displayMealData(meal) { 
   const mealDiv = document.getElementById("meal");
 
   let ingredientsList = "";
