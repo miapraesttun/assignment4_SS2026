@@ -63,7 +63,31 @@ Receives a meal object with fields like:
   strIngredientX, strMeasureX, etc.
 */
 function displayMealData(meal) {
-    // Fill in
+    function displayMealData(meal) {
+  const mealDiv = document.getElementById("meal");
+
+  let ingredientsList = "";
+
+  for (let i = 1; i <= 20; i++) {
+    const ingredient = meal[`strIngredient${i}`];
+    const measure = meal[`strMeasure${i}`];
+
+    if (ingredient && ingredient.trim() !== "") {
+      ingredientsList += `<li>${ingredient} - ${measure}</li>`;
+    }
+  }
+
+  mealDiv.innerHTML = `
+    <h2>${meal.strMeal}</h2>
+    <img src="${meal.strMealThumb}" width="300">
+    <p><strong>Category:</strong> ${meal.strCategory}</p>
+
+    <h3>Ingredients:</h3>
+    <ul>${ingredientsList}</ul>
+
+    <h3>Instructions:</h3>
+    <p>${meal.strInstructions}</p>
+  `;
 }
 
 /*
