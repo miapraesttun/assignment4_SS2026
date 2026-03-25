@@ -2,7 +2,6 @@
 Mapping from MealDB Categories to TheCocktailDB drink ingredient
 You can customize or expand this object to suit your needs.
 */
-console.log("JS kjører")
 
 const mealCategoryToCocktailIngredient = {
   Beef: "whiskey",
@@ -65,7 +64,7 @@ strMeal, strMealThumb, strCategory, strInstructions,
 strIngredientX, strMeasureX, etc.
 */
 function displayMealData(meal) { 
-  const mealDiv = document.getElementById("meal");
+  const mealDiv = document.getElementById("meal-container");
 
   let ingredientsList = "";
 
