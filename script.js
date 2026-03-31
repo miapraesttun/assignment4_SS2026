@@ -136,7 +136,16 @@ Display Cocktail Data in the DOM
 function displayCocktailData(cocktail) {
     const cocktailDiv  = document.getElementById("cocktail-container");
 
-    let ingredientsList = "";
+    let ingredientsList = ""
+
+    for (let i=1; i<=15; i++) {
+      const ingredient = cocktail[`strIngredient${i}`];
+      const measure = cocktail[`strMeasure${i}`];
+
+      if (ingredient && ingredient.trim() !== "") {
+        ingredientsList += `<li>${ingredient} - ${measure}</li>`;
+      }
+    }
 }
 
 /*
