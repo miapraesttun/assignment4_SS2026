@@ -134,7 +134,9 @@ function fetchRandomCocktail() {
 Display Cocktail Data in the DOM
 */
 function displayCocktailData(cocktail) {
-    // Fill in
+    const cocktailDiv  = document.getElementById("cocktail-container");
+
+    let ingredientsList = "";
 }
 
 /*
