@@ -146,7 +146,17 @@ function displayCocktailData(cocktail) {
         ingredientsList += `<li>${ingredient} - ${measure}</li>`;
       }
     }
+
+    cocktailDiv.innerHTML = `
+      <h2>${cocktail.strDrink}</h2>
+      <img src = "${cocktail.strDrinkThumb}" width="300"> 
+    
+      <h3> Ingredients:</h3>
+      <ul>${ingredientsList}</ul>
+    `;
 }
+
+
 
 /*
 Call init() when the page loads
